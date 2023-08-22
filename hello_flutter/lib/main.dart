@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:hello_flutter/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(
-            primarySwatch: Colors.green,
-            textTheme:
-                GoogleFonts.aladinTextTheme(Theme.of(context).textTheme)),
+    var materialApp = MaterialApp(
+        theme: theme(context),
         home: Scaffold(
           appBar: AppBar(
             title: const Text(
@@ -57,5 +54,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ));
+    return materialApp;
   }
 }
