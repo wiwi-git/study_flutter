@@ -63,18 +63,110 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Text tutorialTextTheme() {
-    return const Text('hello! how are you?');
+  Text tutorialTextTheme(BuildContext context) {
+    return Text(
+      'hello! how are you? hello! how are you? hello! ',
+      style: Theme.of(context).textTheme.headlineMedium,
+      textDirection: TextDirection.rtl,
+    );
   }
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
+  Column tutorialTextTheme2(BuildContext context) {
+    return Column(children: [
+      Text(
+        'hello! how are you? hello! how are you? hello! ',
+        style: Theme.of(context).textTheme.headlineMedium,
+        textDirection: TextDirection.rtl,
+      ),
+      Text(
+        'hello! how are you? hello! how are you? hello! ',
+        style: Theme.of(context).textTheme.headlineMedium,
+        textDirection: TextDirection.ltr,
+      ),
+    ]);
+  }
+
+  Text tutorialOverflow() {
+    return const Text(
+      '테ㄱ스트 위ㅅㅢ overflow를 학습하고 있습니다/',
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      style: TextStyle(color: Colors.orange, fontSize: 30),
+    );
+  }
+
+  Text tutorialTextRich(BuildContext context) {
+    return Text.rich(TextSpan(
+        text: 'How ',
+        style: Theme.of(context).textTheme.headlineMedium,
+        children: const <TextSpan>[
+          TextSpan(
+              text: 'are ',
+              style: TextStyle(
+                  fontSize: 35,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.orange)),
+          TextSpan(
+              text: 'you?',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green)),
+        ]));
+  }
+
+  Image tutorialNetworkImage() {
+    return Image.network('https://picsum.photos/300?image=24');
+  }
+
+  Image tutorialAssetImage() {
+    return const Image(
+      image: AssetImage('assets/image01.jpg'),
+      width: 200,
+      height: 400,
+      fit: BoxFit.fill,
+    );
+  }
+
+  Container tutorialIcon() {
+    return Container(
+      margin: const EdgeInsets.all(150),
+      child: const Icon(
+        Icons.forest,
+        size: 50,
+        color: Colors.green,
+      ),
+    );
+  }
+
+  MaterialApp defaultApp(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
               title: const Text('위젯 실습'),
             ),
-            body: tutorialTextTheme()));
+            body: tutorialIcon()));
+  }
+
+  MaterialApp safeAreaApp(BuildContext context) {
+    return const MaterialApp(
+        home: SafeArea(
+      top: true,
+      left: false,
+      bottom: true,
+      right: false,
+      minimum: EdgeInsets.all(10),
+      child: Scaffold(
+        body: Text(
+          'SafeArea Widget을 추가한 경우',
+          style: TextStyle(color: Colors.green, fontSize: 20),
+        ),
+      ),
+    ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return safeAreaApp(context);
   }
 }
