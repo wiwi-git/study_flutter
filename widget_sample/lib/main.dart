@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widget_sample/basic_widget_chapter.dart';
-import 'package:widget_sample/layout_chapter.dart';
 import 'package:widget_sample/input_widget_chapter.dart';
 
 void main() {
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('위젯 실습'),
         ),
-        body: Center(
+        body: const Center(
           child: Text('아래 버튼을 누르세요!'),
         ),
         floatingActionButton: FloatingActionButton(
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
             print('object');
           },
           backgroundColor: Colors.red,
-          child: Icon(
+          child: const Icon(
             Icons.favorite,
             color: Colors.white,
           ),

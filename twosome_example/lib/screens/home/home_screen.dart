@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
       length: menuItems.length,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             '메뉴',
             style: TextStyle(
               color: Colors.black,
@@ -32,7 +32,7 @@ class MyHomePage extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.white,
-          leading: Icon(
+          leading: const Icon(
             Icons.home,
             color: Colors.grey,
           ),
@@ -56,14 +56,14 @@ class MyHomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 BannerWidget(bannerItemImgUrl: bannerItemImgUrl),
-                TodayMenuWidget(),
+                const TodayMenuWidget(),
               ],
             ),
-            CoffeeMenuScreen(),
-            Center(
+            const CoffeeMenuScreen(),
+            const Center(
               child: Text('빙수&아이스크림 화면입니다.'),
             ),
-            Center(
+            const Center(
               child: Text('케이크 화면입니다.'),
             ),
           ],

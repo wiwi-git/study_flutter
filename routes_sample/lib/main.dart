@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Routes Sample',
       initialRoute: '/home',
       routes: {
-        '/home': (context) => MyHomePage(),
-        '/second_page': (context) => SecondPage(),
+        '/home': (context) => const MyHomePage(),
+        '/second_page': (context) => const SecondPage(),
       },
     );
   }

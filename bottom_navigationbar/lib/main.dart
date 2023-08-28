@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: _title, home: MyStatefulWidget());
+    return const MaterialApp(title: _title, home: MyStatefulWidget());
   }
 }
 
@@ -63,7 +63,7 @@ class _MyStatefulWidget extends State<MyStatefulWidget> {
         selectedItemColor: Colors.yellowAccent,
         unselectedItemColor: Colors.grey[50],
         currentIndex: _selectedIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'home',

@@ -24,7 +24,7 @@ class TodayMenuWidget extends StatelessWidget {
           GridView.builder(
             shrinkWrap: true,
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+                const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
             itemCount: todayMenuImgUrl.length,
             itemBuilder: (context, index) {
               if (index >= todayMenuImgUrl.length) {

@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   _MyHomePageState() {
-    print("_MyHomePageState() constructor : mounted=${this.mounted}");
+    print("_MyHomePageState() constructor : mounted=$mounted");
   }
   final String TAG = "_MyHomePageState";
 
@@ -41,42 +41,42 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     print(
-        "$TAG.initState : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.initState : mounted=$mounted : _counter($_counter)");
     super.initState();
   }
 
   @override
   void reassemble() {
     print(
-        "$TAG.reassemble :: mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.reassemble :: mounted=$mounted : _counter($_counter)");
     super.reassemble();
   }
 
   @override
   void didChangeDependencies() {
     print(
-        "$TAG.didChangeDependencies : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.didChangeDependencies : mounted=$mounted : _counter($_counter)");
     super.didChangeDependencies();
   }
 
   @override
   void dispose() {
     print(
-        "$TAG.dispose : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.dispose : mounted=$mounted : _counter($_counter)");
     super.dispose();
   }
 
   @override
   void deactivate() {
     print(
-        "$TAG.deactivate : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.deactivate : mounted=$mounted : _counter($_counter)");
     super.deactivate();
   }
 
   @override
   void didUpdateWidget(covariant MyHomePage oldWidget) {
     print(
-        "$TAG.didUpdateWidget : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.didUpdateWidget : mounted=$mounted : _counter($_counter)");
     super.didUpdateWidget(oldWidget);
   }
 
@@ -84,14 +84,14 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
       print(
-          "$TAG.setState() : mounted=${this.mounted} : _counter(${this._counter})");
+          "$TAG.setState() : mounted=$mounted : _counter($_counter)");
     });
   }
 
   @override
   Widget build(BuildContext context) {
     print(
-        "$TAG.build() : mounted=${this.mounted} : _counter(${this._counter})");
+        "$TAG.build() : mounted=$mounted : _counter($_counter)");
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,

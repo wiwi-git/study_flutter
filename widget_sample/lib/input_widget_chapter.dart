@@ -12,7 +12,7 @@ class TutorialInputWidget implements TestFuncClass {
     return TextField(
       keyboardType: TextInputType.emailAddress,
       controller: TextEditingController(),
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'Email',
         hintText: 'you@email.com',
         icon: Icon(Icons.mail_outline),
@@ -24,7 +24,7 @@ class TutorialInputWidget implements TestFuncClass {
     return TextField(
       controller: TextEditingController(),
       keyboardType: TextInputType.number,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'Number',
         hintText: '12345',
         icon: Icon(Icons.calculate_outlined),
@@ -38,12 +38,12 @@ class TutorialInputWidget implements TestFuncClass {
 
   Padding passwordTextField() {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: TextField(
         controller: TextEditingController(),
         keyboardType: TextInputType.visiblePassword,
         obscureText: true,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           labelText: 'Password',
           border: OutlineInputBorder(),
           icon: Icon(Icons.password),
@@ -57,7 +57,7 @@ class TutorialInputWidget implements TestFuncClass {
       onPressed: () {
         print('push');
       },
-      child: Text('text button'),
+      child: const Text('text button'),
     );
   }
 
@@ -66,12 +66,12 @@ class TutorialInputWidget implements TestFuncClass {
       onPressed: () {
         print('push');
       },
-      icon: Icon(
+      icon: const Icon(
         Icons.add,
         size: 20,
         color: Colors.purple,
       ),
-      label: Text(
+      label: const Text(
         'icon button',
         style: TextStyle(fontSize: 30, color: Colors.purple),
       ),
@@ -83,16 +83,16 @@ class TutorialInputWidget implements TestFuncClass {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ElevatedButton(
+          const ElevatedButton(
             onPressed: null,
             child: Text('inactivate'),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           ElevatedButton(
             onPressed: () {
               print('object');
             },
-            child: Text('activate'),
+            child: const Text('activate'),
           ),
         ],
       ),
@@ -101,21 +101,21 @@ class TutorialInputWidget implements TestFuncClass {
 
   Padding outlinedButton() {
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: OutlinedButton(
         onPressed: () {
           print('object');
         },
-        child: Text('outlined button'),
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.deepOrange,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(10),
             ),
           ),
         ),
+        child: const Text('outlined button'),
       ),
     );
   }

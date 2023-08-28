@@ -75,7 +75,7 @@ class _MenuDetailScreen extends State<MenuDetailScreen> {
                 children: [
                   ChoiceChip(
                     padding: const EdgeInsets.all(8),
-                    label: SizedBox(
+                    label: const SizedBox(
                       width: 140,
                       child: Text(
                         '핫',
@@ -97,7 +97,7 @@ class _MenuDetailScreen extends State<MenuDetailScreen> {
                   ),
                   ChoiceChip(
                     padding: const EdgeInsets.all(8),
-                    label: SizedBox(
+                    label: const SizedBox(
                       width: 140,
                       child: Text(
                         '아이스',
@@ -137,7 +137,7 @@ class _MenuDetailScreen extends State<MenuDetailScreen> {
                 padding: const EdgeInsets.all(8),
                 child: Text(
                   '${thisCoffee.price} 원',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ),
@@ -168,7 +168,7 @@ class _MenuDetailScreen extends State<MenuDetailScreen> {
                   },
                 );
               },
-              child: Text(
+              child: const Text(
                 '주문하기',
                 style: TextStyle(color: Colors.red, fontSize: 22),
               ),

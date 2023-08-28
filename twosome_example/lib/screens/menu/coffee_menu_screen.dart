@@ -10,7 +10,7 @@ class CoffeeMenuScreen extends StatelessWidget {
     return ListView(
       children: List.generate(
         coffees.length,
-        (index) => Container(
+        (index) => SizedBox(
           height: 150,
           child: GestureDetector(
             onTap: () {

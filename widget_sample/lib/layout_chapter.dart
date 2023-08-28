@@ -46,19 +46,19 @@ class LayoutChapter implements TestFuncClass {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           width: 80,
           height: 80,
           color: Colors.cyan[600],
         ),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           width: 90,
           height: 90,
           color: Colors.amber[600],
         ),
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           width: 100,
           height: 100,
           color: Colors.red[600],
@@ -96,7 +96,7 @@ class LayoutChapter implements TestFuncClass {
   Center tutorialCenter() {
     return Center(
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         color: Colors.amberAccent,
         width: 120,
         height: 120,
@@ -110,7 +110,7 @@ class LayoutChapter implements TestFuncClass {
         width: 120,
         height: 120,
         color: Colors.blue[50],
-        child: Align(
+        child: const Align(
           alignment: Alignment.topRight,
           child: FlutterLogo(size: 60),
         ),
@@ -144,7 +144,7 @@ class LayoutChapter implements TestFuncClass {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 20, bottom: 20),
+          padding: const EdgeInsets.only(top: 20, bottom: 20),
           child: Image.network(
             'https://picsum.photos/200?image=30',
             width: 420,
